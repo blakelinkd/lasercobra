@@ -1,6 +1,10 @@
 <?php
 /* Template Name: Header Searchbar */
 
-echo "Hello from header-search.php";
-
 ?>
+
+<div class="search-input">
+    <label class="forlabel" for="search_input">
+    <input id="search_input" placeholder="Search Videos..." name="search_input" type="text">
+</label>
+</div>
