@@ -1,0 +1,81 @@
+// A media query between two ranges.
+@mixin media-range($small, $large) {
+	@if type-of($small) != "number" {
+		$small: map-get($break-points, $small);
+	}
+	@if type-of($large) != "number" {
+		$large: map-get($break-points, $large);
+	}
+	@media (min-width: $small) and (max-width: $large) {
+		@content;
+	}
+}
+
+// Min-width media query.
+@mixin media-min($size) {
+	@if type-of($size) != "number" {
+		$size: map-get($break-points, $size);
+	}
+	@media (min-width: $size) {
+		@content;
+	}
+}
+
+// Based on 16px browser default stylesheets.
+$break-points: (start: 0em, small: 48em, medium: 64em, large: 75em);
+$break-point-names: map-keys($break-points);
+
+.row {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	
+	&--gap {
+		grid-column-gap: 10px;
+	}
+}
+
+@for $column from 1 through 12 {
+	.column--start-#{$column} {
+		grid-column-start: $column;
+		grid-row-start: 1;
+	}
+	.column--#{$column} {
+		grid-column-end: span $column;
+	}
+}
+
+@for $break-point-index from 1 through length($break-point-names) {
+	$break-point-current: nth($break-point-names, $break-point-index);
+	$break-point-next: false;
+	
+	@if $break-point-index < length($break-point-names) {
+		$break-point-next:  nth($break-point-names, $break-point-index+1);
+	}
+	
+	@for $column from 1 through 12 {
+		.column--#{$break-point-current}-start-#{$column} {
+			@if $break-point-next {
+				@include media-range($break-point-current, $break-point-next) {
+					grid-column-start: $column;
+					grid-row-start: 1;
+				}
+			} @else {
+				@include media-min($break-point-current) {
+					grid-column-start: $column;
+					grid-row-start: 1;
+				}				
+			}
+		}
+		.column--#{$break-point-current}-#{$column} {
+			@if $break-point-next {
+				@include media-range($break-point-current, $break-point-next) {
+					grid-column-end: span $column;
+				}
+			} @else {
+				@include media-min($break-point-current) {
+					grid-column-end: span $column;
+				}				
+			}
+		}
+	}
+}

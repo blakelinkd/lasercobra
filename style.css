@@ -1,0 +1,53 @@
+/*
+Theme Name: lasercobra
+Theme URI: https://github.com/blakelinkd/lasercobra
+Author: Blake Link
+Author URI: https://github.com/blakelinkd
+Description: My First wordpress theme
+Version: 1.0
+License: GNU General Public License v3
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: lasercobra
+Tags: Theme
+*/
+
+
+
+ #logo {
+     border: 1px solid purple;
+     background-color: 1px solid rgba(128, 0, 128, 0.281);
+
+
+ }
+
+ #menu {
+     border: 1px solid green;
+     background-color: 1px solid rgba(128, 0, 128, 0.281);
+
+ }
+
+ #menu ul {
+     list-style: none;
+     
+ }
+
+ #nav-search {
+     border: 1px solid rgb(255, 165, 0);
+ }
+
+ #nav-user {
+     border: 1px solid rgb(154, 205, 50);
+
+}
+
+ #sidebar {
+     border: 1px solid rebeccapurple;
+ }
+
+ #main_loop {
+     border: 1px solid royalblue;
+ }
+
+ #custom_feed {
+     border: 1px solid orchid;
+ }
