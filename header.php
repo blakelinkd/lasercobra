@@ -13,8 +13,8 @@
 
     <div id="header" class="bootstrap-wrapper">
         <div id="nav" class="container-fluid">
-            <div class="row">
-                <div id="logo" class="col-md-2">
+            <div id="nav-row" class="row">
+                <div id="nav-logo" class="col-lg-2">
                 <img class="header-logo-image" src="<?php echo get_template_directory_uri(); ?>/assets/logo.png" alt="Laser Cobra ">
                 
             </div>
@@ -26,10 +26,10 @@
                 </div> -->
                 
                 
-                <div id="nav-search" class="col-md-6">
+                <div id="nav-search" class="col-lg-6">
                 <?php get_template_part('header-search'); ?>
                 </div>
-                <div id="nav-user" class="col-md-4">
+                <div id="nav-user" class="col-lg-4">
                     <?php 
                     if(is_user_logged_in()): 
                         $current_user = wp_get_current_user();

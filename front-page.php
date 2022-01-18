@@ -5,7 +5,9 @@ get_header();
 <div class="bootstrap-wrapper">
 	<div class="container-fluid">
         <div class="row">
-           <div id="sidebar" class="col-md-2"><h1>Sidebar</h1></div>
+           <div id="sidebar" class="col-md-2">
+               <?php get_sidebar(); ?>
+           </div>
 
            <div id="main_loop" class="col-md-6">
                <?php
