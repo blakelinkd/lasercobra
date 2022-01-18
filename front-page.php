@@ -19,7 +19,8 @@ get_header();
                     while ( $loop->have_posts() ):
                         $loop->the_post();
                         ?>
-                <h1><?php the_title(); ?></h1>
+                <h1 class="post post-title"><span>title: </span><?php the_title(); ?></h1>
+                <h3 class="post post-author"><span>creator: </span><?php the_author(); ?></h3>
                 <div class="entry-content">
                     <?php the_content(); ?>
                 </div>
