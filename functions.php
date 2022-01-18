@@ -48,6 +48,19 @@ function create_post_types() {
                       'search_items'  => 'Search Videos',
                       
                     ),
+        'supports' => array( 
+            'comments',
+            'title',
+            'editor',
+            'author',
+            'thumbnail',
+            'excerpt',
+            'trackbacks',
+            'custom-fields',
+            'revisions',
+            'page-attributes',
+            'attatchment:video'
+        ),
         'description' => 'Video Posts',
         'public'      => true,
         'has_archive' => true,

@@ -11,24 +11,26 @@ get_header();
 
            <div id="main_loop" class="col-md-6">
                <?php
-                if (have_posts()) : 
-                    while (have_posts()) :
-                        ?><h1><?php the_title(); ?></h1>
-                        <?php
-                        the_post();
-                            the_content();
-                    endwhile;
-                endif;
+                
 
                 $args = array('post_type' => array('post-type' => 'videos'));
                 $loop = new WP_Query( $args );
-                while ($loop->have_posts() ):
-                    $loop->the_post();
-                    ?><h3><?php echo the_title();?></h3><?php echo the_excerpt();
+                if ( $loop->have_posts()) :
+                    while ( $loop->have_posts() ):
+                        $loop->the_post();
+                        ?>
+                <h1><?php the_title(); ?></h1>
+                <div class="entry-content">
+                    <?php the_content(); ?>
+                </div>
+                <?php
                 endwhile;
-                wp_reset_postdata();
-                ?>
-
+                    wp_reset_postdata();
+                else: 
+                _e('sorry, no posts found.');
+                endif; 
+            
+            ?>
 
 
 

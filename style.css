@@ -27,7 +27,7 @@ body {
 }
 
 .sidebar-action {
-    
+
 }
 .icon {
     width: 64px;
@@ -130,9 +130,30 @@ body {
      
  }
  #main_loop h1 {
-     color: rgb(154, 205, 50);
+     /* color: rgb(154, 205, 50); */
+     color: #f61b9d; 
+     color: #f75121;
+     color: #a9126c;
+     color: #8de9e6;
+     color: #c3157c;
+     color: #bfc674;
+     color: #3c3dd6;
+     color: rgb(114, 60, 214);
      font-size: 2rem;
  }
+
+ #main_loop h3 {
+    /* color: rgb(154, 205, 50); */
+    color: #f61b9d; 
+    color: #f75121;
+    color: #a9126c;
+    color: #8de9e6;
+    color: #c3157c;
+    color: #bfc674;
+    color: #3c3dd6;
+    color: rgb(114, 60, 214);
+    font-size: 2rem;
+}
 
  #custom_feed {
      /* border-bottom: 1px solid orchid; */
