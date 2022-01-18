@@ -26,6 +26,17 @@ body {
     margin: auto auto 2rem auto;
 }
 
+.sidebar-action {
+    
+}
+.icon {
+    width: 64px;
+    height: 64px;
+    fill: #f61b9d;
+    border-radius: 110px;
+}
+
+
 #nav {
     
 
@@ -103,8 +114,14 @@ body {
 
 
  #sidebar {
-     /* border-bottom: 1px solid rebeccapurple; */
  }
+
+ #icon1 {
+     color: green;
+     background-color: green;
+ }
+
+
 
  #main_loop {
      /* border-bottom: 1px solid royalblue; */
