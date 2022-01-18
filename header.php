@@ -15,8 +15,9 @@
         <div id="nav" class="container-fluid">
             <div class="row">
                 <div id="logo" class="col-md-2">
-                    <h1>Logo</h1>
-                </div>
+                <img class="header-logo-image" src="<?php echo get_template_directory_uri(); ?>/assets/logo.png" alt="Laser Cobra ">
+                
+            </div>
                 <!-- <div id="menu" class="col-md-6">
                     <ul class="row">
                         <li class="col-md-6">one</li>
@@ -29,16 +30,16 @@
                 <?php get_template_part('header-search'); ?>
                 </div>
                 <div id="nav-user" class="col-md-4">
-                    <a href="/wordpress/wp-admin">
                     <?php 
                     if(is_user_logged_in()): 
                         $current_user = wp_get_current_user();
                         echo $current_user->user;
                     else:
-                        echo "Login";
+                        get_template_part('header-login');
+                        
                     endif;
-                    ?></a>
-                <h1>User Stuff</h1></div>
+                    ?>
+                </div>
                 </div>
 
             </div>

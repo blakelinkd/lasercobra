@@ -8,7 +8,6 @@ get_header();
            <div id="sidebar" class="col-md-2"><h1>Sidebar</h1></div>
 
            <div id="main_loop" class="col-md-6">
-               <h1>Main Loop</h1>
                <?php
                 if (have_posts()) : 
                     while (have_posts()) :
